@@ -29,9 +29,9 @@ The demos are provided in two versions:
 
 * The scripts depend on the python bindings of libigl for mesh file i/o as well as linear subdivision (https://libigl.github.io/libigl-python-bindings/). Install via 
   
-  conda install -c conda-forge igl
+  `conda install -c conda-forge igl`
 
 * To run the Jupyter scripts and perform interactive mesh visualization, you also need to install meshplot (https://skoch9.github.io/meshplot/):
 
-  conda install -c conda-forge meshplot 
+  `conda install -c conda-forge meshplot` 
 
