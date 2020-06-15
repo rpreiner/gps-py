@@ -14,8 +14,12 @@ This repository contains two examples from the paper, demoing the functionality 
 * **tweety-inference** (Fig. 7)  
 Demoes the automatic enrichment of a given input triangle mesh with covariances based on Eq. 16, using the tweety model. The resulting covmesh leads to a GPS surface with sharper features than ordinary with loop subdivision.
 
+<img align="center" src="/img/tweety.png" width="400">
+
 * **cones** (Fig. 10)
 Shows the different GPS variants of a fixed cone control mesh under varying Gaussian covariances at the apex.
+
+<img align="center" src="/img/cones.png" width="600">
 
 
 ## Files
