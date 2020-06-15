@@ -1,0 +1,16 @@
+If you use this code, in a modified or unmodified version, or if you create code based on or inspired by its substantial parts
+in your academic projects, please cite our paper as appropriate: 
+
+@article {preiner:2019:gps,
+    title = "Gaussian-Product Subdivision Surfaces",
+    author = "Reinhold Preiner and Tamy Boubekeur and Michael Wimmer",
+    year = "2019",
+    month = "7",
+    doi = "10.1145/3306346.3323026",
+    issn = "0730-0301",
+    journal = "ACM Transactions on Graphics",
+    number = "4",
+    volume = "38",
+    pages = "35:1--35:11",
+    URL = "https://cgv.tugraz.at/preiner/gps/"
+}
