@@ -10,7 +10,7 @@
 import numpy as np
 import igl
 import os
-root_folder = "."
+root_folder = ".."
 
 
 def loop_gps(v, f, c, n):
