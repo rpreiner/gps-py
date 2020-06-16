@@ -11,7 +11,7 @@ import scipy as sp
 import numpy as np
 import os
 import copy
-root_folder = "."
+root_folder = ".."
 
 
 # define mesh struct
