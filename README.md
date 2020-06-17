@@ -35,7 +35,8 @@ The demos are provided in two versions:
   
   `conda install -c conda-forge igl`
 
-* To run the Jupyter scripts and perform interactive mesh visualization, you also need to install meshplot (https://skoch9.github.io/meshplot/):
+* To run the Jupyter scripts and perform interactive mesh visualization, you also need to install jupyter and meshplot (https://skoch9.github.io/meshplot/):
 
+  `conda install -c conda-forge jupyter` 
   `conda install -c conda-forge meshplot` 
 
