@@ -1,0 +1,58 @@
+gps-py 
+Installation and Execution instructions
+
+---------------
+
+Prerequisites: 
+* We assume the repository was downloaded or cloned such that its root directory is found at C:\gps-py\ on your Win10 computer. On other platforms or for other root directories, adjust the commands below accordintly.
+* To install the required python dependencies, you need the Conda package management environment. The reduced 'Miniconda' version is sufficient:
+
+
+1. Download the latest miniconda distribution for your platform from
+
+	https://docs.conda.io/en/latest/miniconda.html
+	
+   The following description is specific to the Win64-version for Python 3.7 (Miniconda3-latest-Windows-x86_64.exe). On other platforms, the installation routine should be similar. 
+   
+2. Run the installer to install the miniconda distribution to a path of your choice. In the following, we assume the path to be C:\miniconda3. The advanced options ("Add to PATH" and "Register as default") can both be left unchecked.
+     
+3. Start the miniconda prompt. On Win10, search for "Anaconda Prompt (miniconda3)" in your start menu, or run the following command (Win+R): 
+
+	cmd /K C:\miniconda3\Scripts\activate.bat
+	
+4. Execute
+
+	conda install -c conda-forge igl
+	
+   to install the libigl python lib and its dependencies. During the installation, you need to confirm by entering 'Y'.
+
+5. Change to the repository directory containing the python scripts:
+
+	cd C:\gps-py\py\
+	
+6. Execute the python scripts
+
+	python cones.py
+	python tweety-inference.py
+	
+   Both scripts write output models in OFF file format to C:\gps-py\data (to be viewed in Meshlab or other 3D model viewers of your choice):
+   
+	* cones.py replicates Fig. 10 from the paper. 
+	  It creates a simple cone control mesh and derives different covariance meshes with isotropic covariances at their base and different covariances at the apex. Then the Gaussian-Product subdivision surface is computed for each covmesh variant (using the standard loop subdivision routine from libigl) and written to data/cone-<variant>-gps.off
+	
+	* tweety-inference.py replicates Fig. 7 from the paper.
+	  It loads a simple tweety triangle mesh from the data directory, and automatically infers Gaussian covariances to its vertices using Eq. 16 from the paper. Then, both the ordinary Loop subdivision and the Gaussian-Product subdivision surfaces are computed, and both written to data/tweety-loop.off and data/tweety-gps.off, respectively.
+   
+---------------
+   
+The subdirectory C:\gps-py\jupyter-nb\ contains interactive versions of this code as jupyter notebooks. To run, 
+
+1. install jupyter:	conda install -c conda-forge jupyter
+2. install meshplot:	conda install -c conda-forge meshplot
+3. change to dir:	cd C:\gps-py\jupyter-nb\
+3. open script:		py -m notebook cones.py
+	or		py -m notebook tweety-inference.py
+   This opens the chosen script in your browser.
+4. Run the script: Menu > Cell > Run All.
+
+Enjoy!
